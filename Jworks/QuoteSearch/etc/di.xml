@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Jworks
+ * @package     Jworks_QuoteSearch
+ * @author Jitheesh V O <jitheeshvo@gmail.com>
+ * @copyright Copyright (c) 2017 Jworks Digital ()
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Create" type="Jworks\QuoteSearch\Block\Adminhtml\Order\Create" />
+
+    <type name="Magento\Framework\App\Rss\RssManagerInterface">
+        <arguments>
+            <argument name="dataProviders" xsi:type="array">
+                <item name="new_order" xsi:type="string">Magento\Sales\Model\Rss\NewOrder</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Ui\Model\Export\MetadataProvider">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="sales_quote_grid" xsi:type="array">
+                    <item name="created_at" xsi:type="string">created_at</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sales_quote_grid_data_source" xsi:type="string">Jworks\QuoteSearch\Model\ResourceModel\Quote\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

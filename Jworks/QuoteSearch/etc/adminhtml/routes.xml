@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Jworks
+ * @package     Jworks_QuoteSearch
+ * @author Jitheesh V O <jitheeshvo@gmail.com>
+ * @copyright Copyright (c) 2017 Jworks Digital ()
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="quotesearch" frontName="quotesearch">
+            <module name="Jworks_QuoteSearch" before="Magento_Sales" />
+        </route>
+    </router>
+</config>

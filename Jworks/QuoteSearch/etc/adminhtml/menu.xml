@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Jworks
+ * @package     Jworks_QuoteSearch
+ * @author Jitheesh V O <jitheeshvo@gmail.com>
+ * @copyright Copyright (c) 2017 Jworks Digital ()
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Jworks_QuoteSearch::sales_quotes" title="Search Customer Quotes" translate="title" module="Jworks_QuoteSearch" sortOrder="100" parent="Magento_Sales::sales_operation" action="quotesearch/quotes" resource="Jworks_QuoteSearch::sales_quote"/>
+    </menu>
+</config>
